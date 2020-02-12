@@ -4,6 +4,14 @@ pygame.init()
 # Create the window
 win = pygame.display.set_mode((800, 600))
 img = pygame.image.load("assets/background.png").convert()
+img = pygame.transform.scale(img,(800,500))
+ship = pygame.image.load("assets/PirateShip.png").convert_alpha()
+cookies = pygame.image.load("assets/cookies.jpg").convert()
+
+# Create the font
+font = pygame.font.SysFont("arial", 60)
+# Create the text object
+text = font.render("The Voyage", True, (5, 60, 94))
 
 run = True
 while run:
@@ -14,10 +22,12 @@ while run:
 # Game code starts here ---------------------
   win.fill((5, 60, 94))
 
-  # Draw a rectangle
-  # pygame.draw.rect(win, (219, 34, 42), (50, 50, 100, 200))
-  win.blit(img, (150, 00))
-  
+  win.blit(img, (0, 60))
+  win.blit(text, (230, 200))
+  win.blit(ship, (200,250))
+  win.blit(cookies,)
+
+
   #Update the display
   pygame.display.update()
 
