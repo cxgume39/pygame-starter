@@ -3,7 +3,7 @@ pygame.init()
 
 # Create the window
 win = pygame.display.set_mode((800, 600))
-img = pygame.image.load("assets/gfx/log.png").convert()
+img = pygame.image.load("assets/background.png").convert()
 
 run = True
 while run:
@@ -15,8 +15,8 @@ while run:
   win.fill((5, 60, 94))
 
   # Draw a rectangle
-  # # pygame.draw.rect(win, (219, 34, 42), (50, 50, 100, 200))
-  win.blit(img, (400, 300))
+  # pygame.draw.rect(win, (219, 34, 42), (50, 50, 100, 200))
+  win.blit(img, (150, 00))
   
   #Update the display
   pygame.display.update()
