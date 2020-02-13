@@ -6,7 +6,7 @@ win = pygame.display.set_mode((800, 600))
 img = pygame.image.load("assets/background.png").convert()
 img = pygame.transform.scale(img,(800,500))
 ship = pygame.image.load("assets/PirateShip.png").convert_alpha()
-cookies = pygame.image.load("assets/cookies.jpg").convert()
+x = 200
 
 # Create the font
 font = pygame.font.SysFont("arial", 60)
@@ -24,9 +24,14 @@ while run:
 
   win.blit(img, (0, 60))
   win.blit(text, (230, 200))
-  win.blit(ship, (200,250))
-  win.blit(cookies,)
-
+  win.blit(ship, (x,250))
+  keys=pygame.key.get_pressed()
+  if keys[pygame.K_LEFT]:
+    x -= 0.5
+  if keys[pygame.K_RIGHT]:
+    x += 0.5
+  if keys[pygame.K_UP]:
+    x += 0.5
 
   #Update the display
   pygame.display.update()
