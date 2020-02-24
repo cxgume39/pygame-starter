@@ -30,9 +30,9 @@ while run:
   win.blit(ship, (x,250))
   keys=pygame.key.get_pressed()
   if keys[pygame.K_LEFT]:
-    x -= 0.5
+    x -= 1
   if keys[pygame.K_RIGHT]:
-    x += 0.5
+    x += 1
 
   #Update the display
   pygame.display.update()
